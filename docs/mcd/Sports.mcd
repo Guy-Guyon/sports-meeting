@@ -1,0 +1,3 @@
+PERSON: id_person, name, first_name, department, mail  
+OCCUPE, 1N PERSON, 1N SPORT: niveau
+SPORT: id_sport, design
