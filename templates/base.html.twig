@@ -2,18 +2,29 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Sport-meeting{% endblock %}</title>
+        <link rel="shortcut icon" type="image/x-icon" href={{ asset("/public/favicon.ico") }}>
+        <link rel="stylesheet" href= {{ asset('/public/css/reset.css') }} >
+        <link rel="stylesheet" href= {{ asset('/public/css/style.css') }} >
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
+
     <body>
-        {% block body %}{% endblock %}
+        <header class="header">
+            <div class="header_logo">
+                <img src="/public/images/logo-sportMeetring.png" alt="Logo du site meeting sports">
+            </div>
+            <div class="header_h1">
+                <h1 class="header_h1_titre">Meeting Sports</h1>
+            </div>
+        </header>
+
+    {% block body %}
+    {% endblock %}
     </body>
+    {% block javascripts %}{% endblock %}
 </html>
+{#finir l'intégration del la base html, regarder avec le site JTMC pour s'inspirer#}
